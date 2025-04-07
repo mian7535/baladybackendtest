@@ -89,6 +89,9 @@ class QuizController extends Controller
                 $right_anwars = count(array_filter($correct_answars));
                 $percentage = ($right_anwars / $myanswars) * 100;
 
+                \Log::info($percentage);
+                exit();
+
                 if (80 <= $percentage) {
 
                     $status = "Your Are Pass";
